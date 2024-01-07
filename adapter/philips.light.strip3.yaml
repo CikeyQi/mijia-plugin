@@ -1,0 +1,47 @@
+actionable:
+  - name: ["开关"]
+    desc: "灯带开关，可用值：开、关"
+    siid: 2
+    piid: 1
+    value_regexp: '/(开|关)/g'
+  - name: ["情景模式"]
+    desc: "更换情景模式，可用值：1 - 怦然心动 / 2 - 温馨篝火 / 3 - 北欧极光 / 4 - 漫步海滩 / 5 - 梦幻多彩 / 6 - 盛夏青柠 / 7 - 瞬息万变 / 8 - 四季如歌"
+    siid: 2
+    piid: 2
+    value_regexp: '/([1-8])/g'
+  - name: ["亮度"]
+    desc: "调整灯带亮度，可用值：1-100"
+    siid: 2
+    piid: 3
+    value_regexp: '/([1-9]|[1-9][0-9]|100)/g'
+  - name: ["颜色"]
+    desc: "调整灯带颜色，可用值：0-16777215"
+    siid: 2
+    piid: 4
+    value_regexp: '/([0-9]|[1-9][0-9]{0,6}|1[0-6][0-7][0-7][0-2][0-5])/g'
+  - name: ["声光律动"]
+    desc: "灯带声光律动功能开关，可用值：开、关"
+    siid: 2
+    piid: 5
+    value_regexp: '/(开|关)/g'
+viewable:
+  - name: '灯带状态'
+    siid: 2
+    piid: 1
+    unit: ''
+  - name: '灯带模式'
+    siid: 2
+    piid: 2
+    unit: ''
+  - name: '灯带亮度'
+    siid: 2
+    piid: 3
+    unit: '%'
+  - name: '灯带颜色'
+    siid: 2
+    piid: 4
+    unit: 'RGB'
+  - name: '灯带声光律动'
+    siid: 2
+    piid: 5
+    unit: ''

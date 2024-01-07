@@ -18,7 +18,7 @@ actionable:
     desc: "调整台灯模式，可用值：0 - 阅读 / 1 - 计算机 / 2 - 夜读 / 3 - 防蓝光 / 4 - 有效工作 / 5 - 蜡烛 / 6 - 闪烁"
     siid: 2
     piid: 4
-    value_regexp: '/(0|1|2|3|4|5|6)/g'
+    value_regexp: '/([0-6])/g'
 viewable:
   - name: '灯泡状态'
     siid: 2
