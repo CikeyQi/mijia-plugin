@@ -59,6 +59,12 @@ async function login(sid, user, pwd) {
     };
   }
 
+  if (result['location'] === '') {
+    return {
+      'code': -1,
+      'message': '登陆遇到设备锁，请在 https://account.xiaomi.com/ 登录一遍，通过设备锁验证后等待10分钟再试'
+    };
+  }
   msg = await instance.get(result['location']);
   let cookies = {};
   msg.headers['set-cookie'].forEach(function (cookie) {
@@ -85,8 +91,9 @@ async function login_config(user_id, user, password) {
     config_file[user_id] = authorize;
     config.setConfig(config_file);
     return true;
+  } else {
+    return authorize['message'];
   }
-  return false;
 }
 
 export { login_config };

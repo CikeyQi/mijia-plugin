@@ -53,10 +53,10 @@ export class Login extends plugin {
       listen[e.user_id].password = e.raw_message
       e.reply("正在登录中...")
       let login_status = await login_config(e.user_id, listen[e.user_id].user, listen[e.user_id].password);
-      if (login_status) {
+      if (login_status === true) {
         e.reply("登录成功")
       } else {
-        e.reply("登录失败，请检查账号密码是否正确")
+        e.reply("登录失败，原因：" + login_status)
       }
       listen[e.user_id] = undefined
       return false
