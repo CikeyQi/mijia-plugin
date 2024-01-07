@@ -15,11 +15,11 @@ export class DevAtt extends plugin {
       priority: 5000,
       rule: [
         {
-          reg: '#?米家(.*)状态$',
+          reg: '^#?米家(.*)状态$',
           fnc: 'devAtt_get'
         },
         {
-          reg: '#?米家控制(.*)$',
+          reg: '^#?米家控制(.*)$',
           fnc: 'devAtt_set'
         },
         {

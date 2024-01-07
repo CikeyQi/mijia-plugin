@@ -9,7 +9,7 @@ export class Rooms extends plugin {
             event: 'message',
             priority: 5000,
             rule: [{
-                reg: '#?米家房间$',
+                reg: '^#?米家房间$',
                 fnc: 'rooms'
             }]
         })

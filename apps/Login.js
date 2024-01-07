@@ -15,7 +15,7 @@ export class Login extends plugin {
       rule: [
         {
           /** 命令正则匹配 */
-          reg: '#?米家登录$',
+          reg: '^#?米家登录$',
           /** 执行方法 */
           fnc: 'login'
         },

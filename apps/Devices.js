@@ -9,7 +9,7 @@ export class Devices extends plugin {
       event: 'message',
       priority: 5000,
       rule: [{
-        reg: '#?米家设备$',
+        reg: '^#?米家设备$',
         fnc: 'devices'
       }]
     })
