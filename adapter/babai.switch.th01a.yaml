@@ -1,0 +1,38 @@
+actionable:
+  - name: ["开关"]
+    desc: "通断器开关，可用值：开、关"
+    siid: 2
+    piid: 1
+    value_regexp: '/(开|关)/g'
+  - name: ["节能模式"]
+    desc: "节能模式开关，可用值：开、关"
+    siid: 2
+    piid: 2
+    value_regexp: '/(开|关)/g'
+  - name: ["关机延迟"]
+    desc: "关机延迟，可用值：开、关"
+    siid: 2
+    piid: 3
+    value_regexp: '/(开|关)/g'
+  - name: ["模式"]
+    desc: "模式，可用值：1 - 正常 / 2 - 记忆"
+    siid: 2
+    piid: 4
+    value_regexp: '/(1|2)/g'
+viewable:
+  - name: '通断器开关'
+    siid: 2
+    piid: 1
+    unit: ''
+  - name: '节能模式'
+    siid: 2
+    piid: 2
+    unit: ''
+  - name: '关机延迟'
+    siid: 2
+    piid: 3
+    unit: ''
+  - name: '模式'
+    siid: 2
+    piid: 4
+    unit: ''

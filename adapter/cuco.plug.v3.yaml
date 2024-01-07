@@ -1,0 +1,37 @@
+actionable:
+  - name: ["开关"]
+    desc: "插座开关，可用值：开、关"
+    siid: 2
+    piid: 1
+    value_regexp: '/(开|关)/g'
+  - name: ["默认开机状态"]
+    desc: "默认开机状态，可用值：0-2"
+    siid: 2
+    piid: 2
+    value_regexp: '/(0|1|2)/g'
+  - name: ["指示灯"]
+    desc: "指示灯，可用值：开、关"
+    siid: 13
+    piid: 1
+    value_regexp: '/(开|关)/g'
+viewable:
+  - name: '插座开关'
+    siid: 2
+    piid: 1
+    unit: ''
+  - name: '默认开机状态'
+    siid: 2
+    piid: 2
+    unit: ''
+  - name: '指示灯'
+    siid: 13
+    piid: 1
+    unit: ''
+  - name: '电压'
+    siid: 11
+    piid: 2
+    unit: 'V'
+  - name: '功耗'
+    siid: 11
+    piid: 1
+    unit: 'W'
