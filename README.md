@@ -5,6 +5,29 @@
 
 基于Yunzai-Bot的米家插件，在任何地方控制家中米家生态设备
 
+# 安装
+
+1.克隆本仓库至 plugins 目录
+
+- 使用 Ghproxy（国内服务器推荐使用此方法）
+
+```
+git clone https://mirror.ghproxy.com/https://github.com/CikeyQi/mijia-plugin.git ./plugins/mijia-plugin
+```
+
+- 使用 Github
+
+```
+git clone https://github.com/CikeyQi/mijia-plugin.git ./plugins/mijia-plugin
+```
+
+2. 安装依赖
+
+```
+pnpm install --filter=mijia-plugin
+```
+
+
 # 如何登录
 
 暂时只支持 **小米账号** 与 **密码** 登录，安全性有待提高，建议私聊登录，将来可能会支持扫码登录
@@ -23,7 +46,7 @@
 
 ![image](https://github.com/CikeyQi/mijia-plugin/assets/61369914/c2dc380b-35a4-4017-b283-107497ec6d2c)
 
-看到图中，SIID是功能分类ID，里面有很多设备属性ID，就是PIID，一个SSID加上一个PIID即可定位到一个属性，可以看到图中，当SSID为2，PIID为1时，控制的就是灯的开关
+看到图中，SIID是功能分类ID，里面有很多设备属性ID，就是PIID，一个SIID加上一个PIID即可定位到一个属性，可以看到图中，当SIID为2，PIID为1时，控制的就是灯的开关
 
 ⚠️注意：权限栏有标注 **读**，则这个属性可以读取值，标注 **写**，则这个属性可以传入值，比如说例子中灯的开关，读是获取灯是开着的还是关着的，写是使灯开着或者关着
 
