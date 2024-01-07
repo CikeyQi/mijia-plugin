@@ -183,6 +183,7 @@ export class DevAtt extends plugin {
       listen[e.user_id].step = 2
       listen[e.user_id].siid = siid
       listen[e.user_id].piid = piid
+      listen[e.user_id].key = e.msg
       listen[e.user_id].value_regexp = value_regexp
       clearTimeout(timeout[e.user_id])
       timeout[e.user_id] = setTimeout(() => {
