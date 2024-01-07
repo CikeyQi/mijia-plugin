@@ -23,9 +23,12 @@ viewable:
   - name: '灯泡状态'
     siid: 2
     piid: 1
+    unit: ''
   - name: '灯泡亮度'
     siid: 2
     piid: 2
+    unit: '%'
   - name: '灯泡色温'
     siid: 2
     piid: 3
+    unit: 'K'

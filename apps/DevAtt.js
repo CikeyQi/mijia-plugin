@@ -71,6 +71,7 @@ export class DevAtt extends plugin {
     adapter.viewable.forEach((item) => {
       viewList.push({
         "name": item.name,
+        "unit": item.unit,
         "did": did,
         "siid": item.siid,
         "piid": item.piid
@@ -96,7 +97,7 @@ export class DevAtt extends plugin {
         value_next = '关';
       }
 
-      viewmsg += '\n' + '[' + viewList[i].name + ']：' + value_next
+      viewmsg += '\n' + '[' + viewList[i].name + ']：' + value_next + viewList[i].unit
     }
     await e.reply(viewmsg)
     return true
