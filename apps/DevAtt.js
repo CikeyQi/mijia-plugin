@@ -135,6 +135,12 @@ export class DevAtt extends plugin {
       return true
     }
 
+    // 如果没有可调参数，直接返回
+    if (adapter.actionable.length == 0) {
+      e.reply('该设备没有可调参数')
+      return true
+    }
+
     // 给出设备的属性列表
     let keyList = '=== ' + devName + ' 的可调参数 ==='
     adapter.actionable.forEach((item) => {
