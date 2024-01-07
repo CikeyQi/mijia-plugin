@@ -19,7 +19,7 @@ export class Devices extends plugin {
   async devices(e) {
     const authorize = await CoreApi.getAuthorize(e.user_id)
     if (!authorize) {
-      return e.reply('请先绑定米家账号')
+      return e.reply('请先使用 #米家登录 绑定米家账号')
     }
     const devices = await CoreApi.getDevices(authorize)
     if (!devices) {

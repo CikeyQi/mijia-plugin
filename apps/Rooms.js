@@ -19,7 +19,7 @@ export class Rooms extends plugin {
     async rooms(e) {
         const authorize = await CoreApi.getAuthorize(e.user_id)
         if (!authorize) {
-            return e.reply('请先绑定米家账号')
+            return e.reply('请先使用 #米家登录 绑定米家账号')
         }
         const rooms = await CoreApi.getRooms(authorize)
         if (!rooms) {
