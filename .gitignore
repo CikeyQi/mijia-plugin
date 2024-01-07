@@ -1,0 +1,3 @@
+node_modules/
+adapter/
+config/config/*.yaml
