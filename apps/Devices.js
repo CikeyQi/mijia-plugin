@@ -25,7 +25,6 @@ export class Devices extends plugin {
     if (!devices) {
       return e.reply('获取设备列表失败')
     }
-    console.log(devices.result.list)
     let deviceList = []
     devices.result.list.forEach((item) => {
       deviceList.push(`┏ 设备名称：${item.name}\n┣ 设备型号：${item.model}\n┗ 设备状态：${item.isOnline ? '在线' : '离线'}`)

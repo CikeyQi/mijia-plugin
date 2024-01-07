@@ -1,6 +1,7 @@
 import crypto from 'crypto';
 import axios from 'axios';
 import FormData from 'form-data';
+import Log from '../utils/logs.js';
 
 function generateSignedNonce(secret, nonce) {
     const sha = crypto.createHash('sha256');
@@ -23,7 +24,7 @@ async function postData(uri, data, authorize) {
         serviceToken = authorize.serviceToken;
         securityToken = authorize.securityToken;
     } catch (error) {
-        console.log('serviceToken not found, Unauthorized');
+        Log.e('serviceToken not found, Unauthorized');
         return null;
     }
     const tempStr = '1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -50,7 +51,7 @@ async function postData(uri, data, authorize) {
         });
         return response.data;
     } catch (error) {
-        console.error(error);
+        Log.e(error);
     }
 }
 

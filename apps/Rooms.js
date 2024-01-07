@@ -25,7 +25,6 @@ export class Rooms extends plugin {
         if (!rooms) {
             return e.reply('获取设备列表失败')
         }
-        console.log(rooms.result.homelist[0].roomlist)
         let rooms_msg = "=== " + rooms.result.homelist[0].name + " 的房间列表 ==="
         rooms.result.homelist[0].roomlist.forEach((item) => {
             rooms_msg += `\n┏ 房间名称：${item.name}\n┣ 房间ID：${item.id}\n┗ 房间设备数：${item.dids.length}`

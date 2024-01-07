@@ -88,7 +88,15 @@ export class DevAtt extends plugin {
         e.reply('设置失败，错误码：' + devAtt.code)
         return true
       }
-      viewmsg += '\n' + '[' + viewList[i].name + ']：' + devAtt.result[0].value
+      let value_next = devAtt.result[0].value
+      
+      if (devAtt.result[0].value === true) {
+        value_next = '开';
+      } else if (devAtt.result[0].value === false) {
+        value_next = '关';
+      }
+
+      viewmsg += '\n' + '[' + viewList[i].name + ']：' + value_next
     }
     await e.reply(viewmsg)
     return true

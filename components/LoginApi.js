@@ -2,6 +2,7 @@ import axios from 'axios';
 import crypto from 'crypto';
 import FormData from 'form-data';
 import config from './Config.js';
+import Log from '../utils/logs.js';
 
 function generateDeviceId() {
   let deviceId = '';
@@ -78,7 +79,8 @@ async function login(sid, user, pwd) {
 
 async function login_config(user_id, user, password) {
   const authorize = await login("xiaomiio", user, password);
-  console.log("登录米家账号 " + user + " 成功"); 
+  L
+  Log.i("登录米家账号 " + user + " 成功"); 
   if (authorize['code'] === 0) {
     const config_file = await config.getConfig();
     config_file[user_id] = authorize;
