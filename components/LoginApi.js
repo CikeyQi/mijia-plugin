@@ -79,7 +79,6 @@ async function login(sid, user, pwd) {
 
 async function login_config(user_id, user, password) {
   const authorize = await login("xiaomiio", user, password);
-  L
   Log.i("登录米家账号 " + user + " 成功"); 
   if (authorize['code'] === 0) {
     const config_file = await config.getConfig();
