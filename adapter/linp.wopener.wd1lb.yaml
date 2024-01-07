@@ -1,0 +1,28 @@
+actionable:
+  - name: ["电机控制"]
+    desc: "控制电机开关，可用值：0 - 暂停 / 1 - 开启 / 2 - 关闭"
+    siid: 2
+    piid: 1
+    value_regexp: '/(0|1|2)/g'
+  - name: ["目标位置"]
+    desc: "设置电机目标位置，可用值：0 - 100"
+    siid: 2
+    piid: 3
+    value_regexp: '/(0|[1-9][0-9]?|100)/g'
+viewable:
+  - name: '当前位置'
+    siid: 2
+    piid: 2
+    unit: '%'
+  - name: '目标位置'
+    siid: 2
+    piid: 3
+    unit: '%'
+  - name: '电池电量'
+    siid: 3
+    piid: 1
+    unit: '%'
+  - name: '充电状态'
+    siid: 3
+    piid: 2
+    unit: ''
