@@ -1,0 +1,24 @@
+actionable:
+  - name: ["开关"]
+    desc: "插座开关，可用值：开、关"
+    siid: 2
+    piid: 1
+    value_regexp: '/(开|关)/g'
+  - name: ["指示灯"]
+    desc: "指示灯，可用值：开、关"
+    siid: 4
+    piid: 1
+    value_regexp: '/(开|关)/g'
+viewable:
+  - name: '插座开关'
+    siid: 2
+    piid: 1
+    unit: ''
+  - name: '指示灯'
+    siid: 4
+    piid: 1
+    unit: ''
+  - name: '功率'
+    siid: 3
+    piid: 1
+    unit: 'W'

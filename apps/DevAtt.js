@@ -97,6 +97,10 @@ export class DevAtt extends plugin {
         value_next = '关';
       }
 
+      if (value_next == undefined) {
+        value_next = '无法获取'
+      }
+
       viewmsg += '\n' + '[' + viewList[i].name + ']：' + value_next + viewList[i].unit
     }
     await e.reply(viewmsg)
