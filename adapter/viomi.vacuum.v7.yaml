@@ -1,0 +1,19 @@
+actionable:
+  - name: ["模式"]
+    desc: "扫地机模式，可用值：0 - 安静 / 1 - 标准 / 2 - 强力"
+    siid: 2
+    piid: 1
+    value_regexp: "/([0-2])/g"
+viewable:
+  - name: "扫地机状态"
+    siid: 2
+    piid: 2
+    unit: ""
+  - name: "扫地机模式"
+    siid: 2
+    piid: 1
+    unit: ""
+  - name: "扫地机电量"
+    siid: 3
+    piid: 1
+    unit: "%"
