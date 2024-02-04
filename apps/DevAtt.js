@@ -23,6 +23,10 @@ export class DevAtt extends plugin {
           fnc: 'devAtt_set'
         },
         {
+          reg: '^#?结束控制$',
+          fnc: 'cancel'
+        },
+        {
           /** 命令正则匹配 */
           reg: '',
           /** 执行方法 */
@@ -169,6 +173,13 @@ export class DevAtt extends plugin {
         e.reply('操作已超时，已取消本次操作')
       }
     }, 60000)
+    return true
+  }
+
+  async cancel(e) {
+    listen[e.user_id] = undefined
+    clearTimeout(timeout[e.user_id])
+    e.reply('已取消本次操作')
     return true
   }
 
