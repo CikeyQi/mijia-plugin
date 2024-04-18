@@ -47,11 +47,11 @@ pnpm install --filter=mijia-plugin
 
 - <details> <summary>写适配器</summary>
 
-  🌟由于米家设备数量大，种类复杂，作者无法做到全部适配，但是写适配器非常简单，所以建议自己配置，如果看完本教程实在是不会可以加群 **551081559** 或者在 **[issue](https://github.com/CikeyQi/mijia-plugin/issues/new)** 留下你的设备型号，我会尽量给大家适配 
+  🌟由于米家设备数量大，种类复杂，作者无法做到全部适配，但是写适配器非常简单，所以建议自己配置，如果看完本教程实在是不会可以加群 [707331865](https://qm.qq.com/q/TXTIS9KhO2) 或者在 **[issue](https://github.com/CikeyQi/mijia-plugin/issues/new)** 留下你的设备型号，我会尽量给大家适配 
 
   适配器文件保存在插件根目录下的 **/adapter** 文件夹，适配器文件的文件名为设备型号（可发送 **#米家设备** 查看你所拥有的设备型号），一个型号对应一个适配器
 
-  接下来打开网站[小米/米家产品库](https://home.miot-spec.com/)，在搜索框直接搜索设备型号，找到自己的设备型号，点击 **规格**，选择最新的 **released**，进入开发文档
+  接下来打开网站 [小米/米家产品库](https://home.miot-spec.com/)，在搜索框直接搜索设备型号，找到自己的设备型号，点击 **规格**，选择最新的 **released**，进入开发文档
 
   ![image](https://github.com/CikeyQi/mijia-plugin/assets/61369914/c2dc380b-35a4-4017-b283-107497ec6d2c)
 
