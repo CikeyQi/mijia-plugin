@@ -1,1 +1,2 @@
-{}
+allow_others_control: false
+allow_others_view: true

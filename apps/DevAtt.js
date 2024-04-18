@@ -1,6 +1,7 @@
 import plugin from '../../../lib/plugins/plugin.js'
 import CoreApi from '../components/CoreApi.js'
 import Adapter from '../components/Adapter.js'
+import Config from '../components/Config.js'
 
 // 临时存储数据
 var listen = []
@@ -38,6 +39,11 @@ export class DevAtt extends plugin {
   }
 
   async devAtt_get(e) {
+    const { allow_others_view } = await Config.getConfig()
+
+    if (!e.isMaster && !allow_others_view) {
+      return e.reply('主人关闭了查看权限，你不允许使用此功能')
+    }
     const authorize = await CoreApi.getAuthorize(e.user_id)
     if (!authorize) {
       return e.reply('请先使用 #米家登录 绑定米家账号')
@@ -111,6 +117,11 @@ export class DevAtt extends plugin {
     return true
   }
   async devAtt_set(e) {
+    const { allow_others_control } = await Config.getConfig()
+
+    if (!e.isMaster && !allow_others_control) {
+      return e.reply('主人关闭了控制权限，你不允许使用此功能')
+    }
     const authorize = await CoreApi.getAuthorize(e.user_id)
     if (!authorize) {
       return e.reply('请先使用 #米家登录 绑定米家账号')
