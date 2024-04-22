@@ -8,10 +8,10 @@
 
 - 用奇怪的方式，让你在聊天框中控制米家设备，或者让群友控制你的米家设备（雾）
 
-- **使用中遇到问题请加QQ群咨询：[707331865](https://qm.qq.com/q/TXTIS9KhO2)**
+- **使用中遇到问题请加 QQ 群咨询：[707331865](https://qm.qq.com/q/TXTIS9KhO2)**
 
 > [!TIP]
-> 最近把家里的一些家具接入了米家，我也能享受智能家庭啦！闲的没事找了下米家的API，就写了这个插件。（其实也没太大用处对叭）
+> 最近把家里的一些家具接入了米家，我也能享受智能家庭啦！闲的没事找了下米家的 API，就写了这个插件。（其实也没太大用处对叭）
 
 ## 安装插件
 
@@ -22,7 +22,8 @@ git clone https://github.com/CikeyQi/mijia-plugin.git ./plugins/mijia-plugin
 ```
 
 > [!NOTE]
-> 如果你的网络环境较差，无法连接到Github，可以使用 [GitHub Proxy](https://mirror.ghproxy.com/) 提供的文件代理加速下载服务
+> 如果你的网络环境较差，无法连接到 Github，可以使用 [GitHub Proxy](https://mirror.ghproxy.com/) 提供的文件代理加速下载服务
+>
 > ```
 > git clone https://mirror.ghproxy.com/https://github.com/CikeyQi/mijia-plugin.git ./plugins/mijia-plugin
 > ```
@@ -44,13 +45,13 @@ pnpm install --filter=mijia-plugin
 
 安装插件后，发送 `#米家登录` ，根据提示登录即可
 
-⚠️注意：**小米账号**是指小米账号ID，手机号，邮箱均不可以登录，请打开手机自行查看小米账号ID。如果登陆时遇到设备锁提示，请在机器人运行的设备上打开 `https://account.xiaomi.com/` 登录一遍小米账号，等待10分钟左右即可正常登录
+⚠️ 注意：**小米账号**是指小米账号 ID，手机号，邮箱均不可以登录，请打开手机自行查看小米账号 ID。如果登陆时遇到设备锁提示，请在机器人运行的设备上打开 `https://account.xiaomi.com/` 登录一遍小米账号，等待 10 分钟左右即可正常登录
 
 </details>
 
 <details> <summary>自己写适配器</summary>
 
-🌟由于米家设备数量大，种类复杂，作者无法做到全部适配，但是写适配器非常简单，所以建议自己配置，如果看完本教程实在是不会可以加群 [707331865](https://qm.qq.com/q/TXTIS9KhO2) 或者在 **[issue](https://github.com/CikeyQi/mijia-plugin/issues/new)** 留下你的设备型号，我会尽量给大家适配 
+🌟 由于米家设备数量大，种类复杂，作者无法做到全部适配，但是写适配器非常简单，所以建议自己配置，如果看完本教程实在是不会可以加群 [707331865](https://qm.qq.com/q/TXTIS9KhO2) 或者在 **[issue](https://github.com/CikeyQi/mijia-plugin/issues/new)** 留下你的设备型号，我会尽量给大家适配
 
 适配器文件保存在插件根目录下的 **/adapter** 文件夹，适配器文件的文件名为设备型号（可发送 **#米家设备** 查看你所拥有的设备型号），一个型号对应一个适配器
 
@@ -58,13 +59,13 @@ pnpm install --filter=mijia-plugin
 
 ![image](https://github.com/CikeyQi/mijia-plugin/assets/61369914/c2dc380b-35a4-4017-b283-107497ec6d2c)
 
-看到图中，SIID是功能分类ID，里面有很多设备属性ID，就是PIID，一个SIID加上一个PIID即可定位到一个属性，可以看到图中，当SIID为2，PIID为1时，控制的就是灯的开关
+看到图中，SIID 是功能分类 ID，里面有很多设备属性 ID，就是 PIID，一个 SIID 加上一个 PIID 即可定位到一个属性，可以看到图中，当 SIID 为 2，PIID 为 1 时，控制的就是灯的开关
 
-⚠️注意：权限栏有标注 **读**，则这个属性可以读取值，标注 **写**，则这个属性可以传入值，比如说例子中灯的开关，读是获取灯是开着的还是关着的，写是使灯开着或者关着
+⚠️ 注意：权限栏有标注 **读**，则这个属性可以读取值，标注 **写**，则这个属性可以传入值，比如说例子中灯的开关，读是获取灯是开着的还是关着的，写是使灯开着或者关着
 
 ![image](https://github.com/CikeyQi/mijia-plugin/assets/61369914/dcac30f1-1829-4267-8bc3-4492440826b8)
 
-以下是插件自带的适配器示例 **yeelink.light.lamp1.yaml**，actionable部分是 **写**，viewable部分是 **读**
+以下是插件自带的适配器示例 **yeelink.light.lamp1.yaml**，actionable 部分是 **写**，viewable 部分是 **读**
 
 ```
 actionable:                                 # 权限"写"接口
@@ -120,9 +121,10 @@ viewable:                                 # 权限"读"接口
 - [x] 查看房间
 
 ## 常见问题
+
 1. 插件安全吗？
-    + 插件只与米家API交互，插件本身不会收集你任何信息也不会主动控制你的设备
-    + 不确保插件被滥用，建议使用时小心谨慎，不要被有心群友使用
+   - 插件只与米家 API 交互，插件本身不会收集你任何信息也不会主动控制你的设备
+   - 不确保插件被滥用，建议使用时小心谨慎，不要被有心群友使用
 
 ## 支持与贡献
 
@@ -131,4 +133,5 @@ viewable:                                 # 权限"读"接口
 有意见或者建议也欢迎提交 [Issues](https://github.com/CikeyQi/mijia-plugin/issues) 和 [Pull requests](https://github.com/CikeyQi/mijia-plugin/pulls)。
 
 ## 许可证
+
 本项目使用 [GNU AGPLv3](https://choosealicense.com/licenses/agpl-3.0/) 作为开源许可证。
