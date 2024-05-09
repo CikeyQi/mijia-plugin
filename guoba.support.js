@@ -6,8 +6,8 @@ import { pluginRoot } from "./model/path.js";
 export function supportGuoba() {
   return {
     pluginInfo: {
-      name: '米家控制插件',
-      title: 'mijia-plugin',
+      name: 'mijia-plugin',
+      title: '米家控制插件',
       author: ['@CikeyQi'],
       authorLink: ['https://github.com/CikeyQi'],
       link: 'https://github.com/CikeyQi/mijia-plugin',
@@ -17,7 +17,7 @@ export function supportGuoba() {
       description: '基于 Yunzai 的小米智能家居控制插件',
       // 显示图标，此为个性化配置
       // 图标可在 https://icon-sets.iconify.design 这里进行搜索
-      icon: 'cbi:xiaomi-logo',
+      icon: 'fluent-emoji-flat:bed',
       // 图标颜色，例：#FF0000 或 rgb(255, 0, 0)
       iconColor: '#19cd90',
       // 如果想要显示成图片，也可以填写图标路径（绝对路径）
