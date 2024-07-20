@@ -19,10 +19,10 @@ function generateSignature(uri, signedNonce, nonce, data) {
 
 async function postData(uri, data, authorize) {
     data = JSON.stringify(data);
-    let serviceToken, securityToken;
+    let serviceToken, ssecurity;
     try {
         serviceToken = authorize.serviceToken;
-        securityToken = authorize.securityToken;
+        ssecurity = authorize.ssecurity;
     } catch (error) {
         Log.e('serviceToken not found, Unauthorized');
         return null;
@@ -32,7 +32,7 @@ async function postData(uri, data, authorize) {
     for (let i = 0; i < 16; i++) {
         nonce += tempStr[Math.floor(Math.random() * tempStr.length)];
     }
-    const signedNonce = generateSignedNonce(securityToken, nonce);
+    const signedNonce = generateSignedNonce(ssecurity, nonce);
     const signature = generateSignature(uri, signedNonce, nonce, data);
 
     const formData = new FormData();

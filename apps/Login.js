@@ -1,5 +1,6 @@
 import plugin from '../../../lib/plugins/plugin.js'
-import { login_config } from '../components/LoginApi.js'
+import LoginApi from '../components/LoginApi.js'
+import config from '../components/Config.js';
 import Init from '../model/init.js'
 
 // 临时存储数据
@@ -21,6 +22,12 @@ export class Login extends plugin {
         },
         {
           /** 命令正则匹配 */
+          reg: '^#?米家扫码登录$',
+          /** 执行方法 */
+          fnc: 'qrlogin'
+        },
+        {
+          /** 命令正则匹配 */
           reg: '',
           /** 执行方法 */
           fnc: 'listen',
@@ -39,6 +46,18 @@ export class Login extends plugin {
       "password": ""
     }
   }
+
+  async qrlogin(e) {
+    let data = await LoginApi.QRlogin(e)
+    if (data.status === true) {
+      const config_file = await config.getConfig();
+      config_file[e.user_id] = data.data;
+      config.setConfig(config_file);
+      e.reply("登录成功")
+    } else {
+      e.reply("登录失败，原因：" + data.msg)
+    }
+  }
   async listen(e) {
     if (listen[e.user_id] == undefined) return false
 
@@ -52,11 +71,14 @@ export class Login extends plugin {
     if (listen[e.user_id].step == 2) {
       listen[e.user_id].password = e.raw_message
       e.reply("正在登录中...")
-      let login_status = await login_config(e.user_id, listen[e.user_id].user, listen[e.user_id].password);
-      if (login_status === true) {
+      let data = await LoginApi.login(listen[e.user_id].user, listen[e.user_id].password)
+      if (data.status === true) {
+        const config_file = await config.getConfig();
+        config_file[e.user_id] = data.data;
+        config.setConfig(config_file);
         e.reply("登录成功")
       } else {
-        e.reply("登录失败，原因：" + login_status)
+        e.reply("登录失败，原因：" + data.msg)
       }
       listen[e.user_id] = undefined
       return false
