@@ -1,54 +1,52 @@
-actionable:                              
-  - name: ["开关"]                       
-    desc: "风扇开关，可用值：开、关"    
-    siid: 2                               
-    piid: 1                              
-    value_regexp: '/(开|关)/g'               
-  - name: ["自然风调节"]
-    desc: "自然风调节，可用值：1 - 湖畔 / 2 - 露营 / 3 - 果岭 / 4 - 梯田"
+actionable:
+  - name:
+      - 开关
+    desc: 风扇开关，可用值：开、关
+    siid: 2
+    piid: 1
+    value_regexp: /(开|关)/g
+  - name:
+      - 自然风调节
+    desc: 自然风调节，可用值：1 - 湖畔 / 2 - 露营 / 3 - 果岭 / 4 - 梯田
     siid: 2
     piid: 2
-    value_regexp: '/(1|2|3|4)/g'
-  - name: ["模式"]
-    desc: "调整吹风模式，可用值：0 - 直吹风/ 1 - 自然风 / 2 - 睡眠风"
+    value_regexp: /(1|2|3|4)/g
+  - name:
+      - 模式
+    desc: 调整吹风模式，可用值：0 - 直吹风/ 1 - 自然风 / 2 - 睡眠风
     siid: 2
     piid: 3
-    value_regexp: '/(0|1|2|3)/g'
-  - name: ["扫风"]                       
-    desc: "自动左右扫风，可用值：开、关"    
-    siid: 2                               
-    piid: 4                            
-    value_regexp: '/(开|关)/g'  
-  - name: ["扫风角度"]
-    desc: "扫风角度，可用值：30 - 30 / 60 - 60 / 90 - 90 / 120 - 120 / 150 - 150"
-    siid: 2
-    piid: 5
-    value_regexp: '/(30|60|90|120|150)/g'
-
-
-
-
-
-
-
-viewable:                                 # 权限"读"接口
-  - name: '风扇状态'                       # 展示名称
-    siid: 2                               # 功能分类ID
-    piid: 1                               # 设备属性ID
-    unit: ''                              # 值的单位，可不填
-  - name: '风扇模式'
-    siid: 2
-    piid: 3
-    unit: ''
-  - name: '自然风模式'
-    siid: 2
-    piid: 2
-    unit: ''
-  - name: '自动左右扫风'
+    value_regexp: /(0|1|2|3)/g
+  - name:
+      - 扫风
+    desc: 自动左右扫风，可用值：开、关
     siid: 2
     piid: 4
-    unit: '' 
-  - name: '扫风角度'
+    value_regexp: /(开|关)/g
+  - name:
+      - 扫风角度
+    desc: 扫风角度，可用值：30 - 30 / 60 - 60 / 90 - 90 / 120 - 120 / 150 - 150
     siid: 2
     piid: 5
-    unit: '°'  
+    value_regexp: /(30|60|90|120|150)/g
+viewable:
+  - name: 风扇状态
+    siid: 2
+    piid: 1
+    unit: ''
+  - name: 风扇模式
+    siid: 2
+    piid: 3
+    unit: ''
+  - name: 自然风模式
+    siid: 2
+    piid: 2
+    unit: ''
+  - name: 自动左右扫风
+    siid: 2
+    piid: 4
+    unit: ''
+  - name: 扫风角度
+    siid: 2
+    piid: 5
+    unit: °
