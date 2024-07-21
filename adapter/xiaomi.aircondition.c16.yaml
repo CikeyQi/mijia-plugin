@@ -44,6 +44,16 @@ actionable:
     siid: 2
     piid: 15
     value_regexp: '/(开|关)/g'
+  - name: ["风速"]
+    desc: "空调风速，可用值：0-7 其中0为自动风速"
+    siid: 3
+    piid: 2
+    value_regexp: '/([0-7])/g'
+  - name: ["上下扫风"]
+    desc: "空调扫风，可用值：开、关"
+    siid: 3
+    piid: 4
+    value_regexp: '/(开|关)/g'
 viewable:
   - name: '空调状态'
     siid: 2
@@ -80,4 +90,12 @@ viewable:
   - name: '防直吹'
     siid: 2
     piid: 15
+    unit: ''
+  - name: '风速'
+    siid: 3
+    piid: 2
+    unit: ''
+  - name: '上下扫风'
+    siid: 3
+    piid: 4
     unit: ''
