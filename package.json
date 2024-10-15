@@ -1,6 +1,6 @@
 {
   "name": "mijia-plugin",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "基于Yunzai-Bot的米家插件，在任何地方控制家中米家生态设备",
   "main": "index.js",
   "scripts": {

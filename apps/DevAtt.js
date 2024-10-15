@@ -39,14 +39,16 @@ export class DevAtt extends plugin {
   }
 
   async devAtt_get(e) {
-    const { allow_others_view } = await Config.getConfig()
+    const { allow_others_view } = await Config.getConfig();
 
-    if (!e.isMaster && !allow_others_view) {
-      return e.reply('主人关闭了查看权限，你不允许使用此功能')
+    if (e.at && !allow_others_view) {
+      return e.reply('主人关闭了查看权限，你不允许操作他人的设备');
     }
-    const authorize = await CoreApi.getAuthorize(e.user_id)
+
+    const authorize = await CoreApi.getAuthorize(e.at && allow_others_view ? e.at : e.user_id);
+
     if (!authorize) {
-      return e.reply('请先使用 #米家登录 绑定米家账号')
+      return e.reply('请先使用 #米家登录 绑定米家账号');
     }
     const devices = await CoreApi.getDevices(authorize)
     if (!devices) {
@@ -100,7 +102,7 @@ export class DevAtt extends plugin {
         return true
       }
       let value_next = devAtt.result[0].value
-      
+
       if (devAtt.result[0].value === true) {
         value_next = '开';
       } else if (devAtt.result[0].value === false) {
@@ -117,14 +119,16 @@ export class DevAtt extends plugin {
     return true
   }
   async devAtt_set(e) {
-    const { allow_others_control } = await Config.getConfig()
+    const { allow_others_control } = await Config.getConfig();
 
-    if (!e.isMaster && !allow_others_control) {
-      return e.reply('主人关闭了控制权限，你不允许使用此功能')
+    if (e.at && !allow_others_control) {
+      return e.reply('主人关闭了控制权限，你不允许操作他人的设备');
     }
-    const authorize = await CoreApi.getAuthorize(e.user_id)
+
+    const authorize = await CoreApi.getAuthorize(e.at && allow_others_control ? e.at : e.user_id);
+
     if (!authorize) {
-      return e.reply('请先使用 #米家登录 绑定米家账号')
+      return e.reply('请先使用 #米家登录 绑定米家账号');
     }
     const devices = await CoreApi.getDevices(authorize)
     if (!devices) {
@@ -165,6 +169,7 @@ export class DevAtt extends plugin {
     adapter.actionable.forEach((item) => {
       keyList += '\n' + '[' + item.name[0] + ']： ' + item.desc
     })
+    keyList += '\n请直接回复要设置的参数即可，如：' + adapter.actionable[0].name[0]
     await e.reply(keyList)
     listen[e.user_id] = {
       "step": 1,
@@ -211,7 +216,7 @@ export class DevAtt extends plugin {
         e.reply('不支持该参数：' + e.msg)
         return true
       }
-      e.reply("请输入要设置的参数：")
+      e.reply("请输入要设置的参数：\n请直接回复要设定的值即可，如：开")
       listen[e.user_id].step = 2
       listen[e.user_id].siid = siid
       listen[e.user_id].piid = piid

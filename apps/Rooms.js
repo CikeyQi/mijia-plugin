@@ -18,14 +18,16 @@ export class Rooms extends plugin {
     }
 
     async rooms(e) {
-        const { allow_others_view } = await Config.getConfig()
+        const { allow_others_view } = await Config.getConfig();
 
-        if (!e.isMaster && !allow_others_view) {
-          return e.reply('主人关闭了查看权限，你不允许使用此功能')
+        if (e.at && !allow_others_view) {
+          return e.reply('主人关闭了查看权限，你不允许操作他人的设备');
         }
-        const authorize = await CoreApi.getAuthorize(e.user_id)
+        
+        const authorize = await CoreApi.getAuthorize(e.at && allow_others_view ? e.at : e.user_id);
+        
         if (!authorize) {
-            return e.reply('请先使用 #米家登录 绑定米家账号')
+          return e.reply('请先使用 #米家登录 绑定米家账号');
         }
         const rooms = await CoreApi.getRooms(authorize)
         if (!rooms) {
