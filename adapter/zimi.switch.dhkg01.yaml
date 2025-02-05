@@ -1,11 +1,11 @@
 actionable:
   - name: ["开关"]
-    desc: "插座开关，可用值：开、关"
+    desc: "电源开关，可用值：开、关"
     siid: 2
     piid: 1
     value_regexp: '/(开|关)/g'
 viewable:
-  - name: '插座开关'
+  - name: '电源开关'
     siid: 2
     piid: 1
     unit: ''
