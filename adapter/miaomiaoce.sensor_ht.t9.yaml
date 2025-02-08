@@ -1,0 +1,14 @@
+actionable: []
+viewable:
+  - name: 温度
+    siid: 2
+    piid: 1
+    unit: '℃'
+  - name: 相对湿度
+    siid: 2
+    piid: 2
+    unit: '%'
+  - name: 电池电量
+    siid: 3
+    piid: 1
+    unit: '%'
