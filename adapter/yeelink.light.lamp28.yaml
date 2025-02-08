@@ -1,0 +1,44 @@
+actionable:
+  - name:
+      - 开关
+    desc: 台灯开关，可用值：开、关
+    siid: 2
+    piid: 1
+    value_regexp: /(开|关)/g
+  - name:
+      - 亮度
+    desc: 调整台灯亮度，可用值：1-100
+    siid: 2
+    piid: 2
+    value_regexp: /([1-9]|[1-9][0-9]|100)/g
+  - name:
+      - 色温
+    desc: 调整显示器挂灯1S色温，可用值：2600-5100
+    siid: 2
+    piid: 3
+    value_regexp: /(26[0-9]{2}|6[0-4][0-9]{2}|5100)/g
+  - name:
+      - 开机状态
+    desc: 台灯默认开机状态（默认为开），可用值：开、关
+    siid: 2
+    piid: 4
+    value_regexp: /(开|关)/g
+  - name:
+      - 模式
+    desc: 调整台灯模式，可用值：5 - 电脑 / 6 - 温暖 / 7 - 休闲 / 8 - 办公 / 9 - 阅读
+    siid: 2
+    piid: 5
+    value_regexp: /(5|6|7|8|9)/g
+viewable:
+  - name: 台灯状态
+    siid: 2
+    piid: 1
+    unit: ""
+  - name: 台灯亮度
+    siid: 2
+    piid: 2
+    unit: "%"
+  - name: 台灯色温
+    siid: 2
+    piid: 3
+    unit: K
