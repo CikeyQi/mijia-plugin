@@ -1,0 +1,64 @@
+actionable:
+  - name: ["音量"]
+    desc: "音箱音量，可用值：0 ~ 100"
+    siid: 2
+    piid: 1
+    value_regexp: "/([0-9]{1,2}|100)/g"
+  - name: ["静音模式"]
+    desc: "静音模式开关，可用值：开、关"
+    siid: 2
+    piid: 2
+    value_regexp: '/(开|关)/g'
+  - name: ["麦克风"]
+    desc: "麦克风静音开关，可用值：开、关"
+    siid: 4
+    piid: 1
+    value_regexp: '/(开|关)/g'
+  - name: ["休眠模式"]
+    desc: "休眠模式开关，可用值：开、关"
+    siid: 7
+    piid: 3
+    value_regexp: '/(开|关)/g'
+  - name: ["免打扰"]
+    desc: "免打扰开关，可用值：开、关"
+    siid: 9
+    piid: 1
+    value_regexp: '/(开|关)/g'
+  - name: ["文本内容"]
+    desc: "测试内容"
+    siid: 7
+    piid: 1
+    value_regexp: '/(.*)/g'
+viewable:
+  - name: '音量'
+    siid: 2
+    piid: 1
+    unit: '%'
+  - name: '静音模式'
+    siid: 2
+    piid: 2
+    unit: ''
+  - name: '播放状态'
+    siid: 3
+    piid: 1
+    unit: ''
+  - name: '播放循环模式'
+    siid: 3
+    piid: 3
+    unit: ''
+  - name: '麦克风静音模式'
+    siid: 4
+    piid: 1
+    unit: ''
+  - name: '休眠模式'
+    siid: 7
+    piid: 3
+    unit: ''
+  - name: '音频ID'
+    siid: 7
+    piid: 4
+    unit: ''
+  - name: '免打扰'
+    siid: 9
+    piid: 1
+    unit: ''
