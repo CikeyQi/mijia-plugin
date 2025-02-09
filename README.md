@@ -22,10 +22,10 @@ git clone https://github.com/CikeyQi/mijia-plugin.git ./plugins/mijia-plugin
 ```
 
 > [!NOTE]
-> 如果你的网络环境较差，无法连接到 Github，可以使用 [GitHub Proxy](https://mirror.ghproxy.com/) 提供的文件代理加速下载服务
+> 如果你的网络环境较差，无法连接到 Github，可以使用 [GitHub Proxy](https://ghproxy.link/) 提供的文件代理加速下载服务
 >
 > ```
-> git clone https://mirror.ghproxy.com/https://github.com/CikeyQi/mijia-plugin.git ./plugins/mijia-plugin
+> git clone https://ghfast.top/https://github.com/CikeyQi/mijia-plugin.git ./plugins/mijia-plugin
 > ```
 
 #### 2. 安装依赖
@@ -125,7 +125,7 @@ viewable:                                 # 权限"读"接口
 
 ## 支持与贡献
 
-如果你喜欢这个项目，请不妨点个 Star🌟，这是对开发者最大的动力， 当然，你可以对我 [爱发电](https://afdian.net/a/sumoqi) 赞助，呜咪~❤️
+如果你喜欢这个项目，请不妨点个 Star🌟，这是对开发者最大的动力， 当然，你可以对我 [爱发电](https://afdian.com/a/sumoqi) 赞助，呜咪~❤️
 
 有意见或者建议也欢迎提交 [Issues](https://github.com/CikeyQi/mijia-plugin/issues) 和 [Pull requests](https://github.com/CikeyQi/mijia-plugin/pulls)。
 
