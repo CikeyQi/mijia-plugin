@@ -37,10 +37,6 @@ viewable:
     siid: 3
     piid: 1
     unit: ''
-  - name: '播放循环模式'
-    siid: 3
-    piid: 3
-    unit: ''
   - name: '麦克风静音模式'
     siid: 4
     piid: 1
