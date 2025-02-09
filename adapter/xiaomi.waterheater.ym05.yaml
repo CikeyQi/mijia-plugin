@@ -52,7 +52,7 @@ viewable:
     siid: 2
     piid: 2
     unit: '℃'
-  - name: '温度温度'
+  - name: '温度'
     siid: 2
     piid: 3
     unit: '℃'
