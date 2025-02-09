@@ -1,0 +1,125 @@
+actionable:
+  - name: ["开关"]
+    desc: "油烟机开关，可用值：开、关"
+    siid: 2
+    piid: 1
+    value_regexp: '/(开|关)/g'
+  - name: ["假日模式"]
+    desc: "假日模式开关，可用值：开、关"
+    siid: 2
+    piid: 7
+    value_regexp: '/(开|关)/g'
+  - name: ["假日通风循环"]
+    desc: "假日通风循环周期，可用值：1 ~ 30"
+    siid: 2
+    piid: 8
+    value_regexp: '/(1[0-9]|2[0-9]|30)/g'
+  - name: ["带灯开机"]
+    desc: "带灯开机开关，可用值：开、关"
+    siid: 2
+    piid: 11
+    value_regexp: '/(开|关)/g'
+  - name: ["带灯关机"]
+    desc: "带灯关机开关，可用值：开、关"
+    siid: 2
+    piid: 12
+    value_regexp: '/(开|关)/g'
+  - name: ["清理提醒"]
+    desc: "清理提醒开关，可用值：开、关"
+    siid: 2
+    piid: 13
+    value_regexp: '/(开|关)/g'
+  - name: ["清洁提醒时间"]
+    desc: "清洁提醒时间，可用值：20 ~ 50 步长10"
+    siid: 2
+    piid: 14
+    value_regexp: '/([2-5]0)/g'
+  - name: ["巡航"]
+    desc: "巡航开关，可用值：开、关"
+    siid: 2
+    piid: 15
+    value_regexp: '/(开|关)/g'
+  - name: ["手势"]
+    desc: "手势开关，可用值：开、关"
+    siid: 2
+    piid: 16
+    value_regexp: '/(开|关)/g'
+  - name: ["灯"]
+    desc: "灯开关，可用值：开、关"
+    siid: 4
+    piid: 1
+    value_regexp: '/(开|关)/g'
+  - name: ["吹风"]
+    desc: "吹风等级控制，可用值：0 - 低 / 1 - 高 / 2 - 炒菜"
+    siid: 5
+    piid: 1
+    value_regexp: '/[0-2]/g'
+viewable:
+  - name: "油烟机开关"
+    siid: 2
+    piid: 1
+    unit: ''
+  - name: "油烟机故障状态"
+    siid: 2
+    piid: 2
+    unit: ''
+  - name: "炉子链接状态"
+    siid: 2
+    piid: 5
+    unit: ''
+  - name: "假日模式"
+    siid: 2
+    piid: 7
+    unit: ''
+  - name: "假日通风循环"
+    siid: 2
+    piid: 8
+    unit: '日'
+  - name: "带灯开机"
+    siid: 2
+    piid: 11
+    unit: ''
+  - name: "带灯关机"
+    siid: 2
+    piid: 12
+    unit: ''
+  - name: "清理提醒"
+    siid: 2
+    piid: 13
+    unit: ''
+  - name: "清理提醒时间"
+    siid: 2
+    piid: 14
+    unit: '小时'
+  - name: "巡航"
+    siid: 2
+    piid: 15
+    unit: ''
+  - name: "手势"
+    siid: 2
+    piid: 16
+    unit: ''
+  - name: "厨房炉灶状态"
+    siid: 3
+    piid: 1
+    unit: ''
+  - name: "灯状态"
+    siid: 4
+    piid: 1
+    unit: ''
+  - name: "吹风级别"
+    siid: 5
+    piid: 1
+    unit: ''
+  - name: "电池电量"
+    siid: 6
+    piid: 1
+    unit: ''
+  - name: "干洗状态"
+    siid: 7
+    piid: 2
+    unit: ''
+  - name: "干洗剩余时间"
+    siid: 7
+    piid: 4
+    unit: '秒'

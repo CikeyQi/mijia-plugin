@@ -1,0 +1,94 @@
+actionable:
+  - name: ["开关"]
+    desc: "热水器开关，可用值：开、关"
+    siid: 2
+    piid: 6
+    value_regexp: '/(开|关)/g'
+  - name: ["目标温度"]
+    desc: "热水器目标温度，可用值：30 ~ 80"
+    siid: 2
+    piid: 2
+    value_regexp: "/([3-7][0-9]|80)/g"
+  - name: ["模式"]
+    desc: "热水器模式，可用值：0 - 单人 / 1 - 大水量"
+    siid: 2
+    piid: 4
+    value_regexp: "/(0|1)/g"
+  - name: ["亮度"]
+    desc: "屏幕亮度，可用值：0 ~ 2"
+    siid: 3
+    piid: 2
+    value_regexp: "/(0|1|2)/g"
+  - name: ["灭菌开关"]
+    desc: "灭菌开关，可用值：开、关"
+    siid: 4
+    piid: 1
+    value_regexp: '/(开|关)/g'
+  - name: ["定时灭菌"]
+    desc: "定时灭菌开关，可用值：开、关"
+    siid: 4
+    piid: 2
+    value_regexp: '/(开|关)/g'
+  - name: ["周期"]
+    desc: "定时灭菌开关，可用值：1 ~ 120"
+    siid: 4
+    piid: 3
+    value_regexp: '/([1-9]|[1-9][0-9]|1[01][0-9]|120)/g'
+  - name: ["开始时间"]
+    desc: "灭菌开始时间，可用值：0 ~ 1439"
+    siid: 4
+    piid: 4
+    value_regexp: '/(?:[0-9]|[1-9][0-9]{1,2}|1[0-3][0-9]{2}|140[0-9]|1430|1439)/g'
+viewable:
+  - name: '开关'
+    siid: 2
+    piid: 6
+    unit: ''
+  - name: '故障状态'
+    siid: 2
+    piid: 1
+    unit: ''
+  - name: '目标温度'
+    siid: 2
+    piid: 2
+    unit: '℃'
+  - name: '温度温度'
+    siid: 2
+    piid: 3
+    unit: '℃'
+  - name: '模式'
+    siid: 2
+    piid: 4
+    unit: ''
+  - name: '状态'
+    siid: 2
+    piid: 5
+    unit: ''
+  - name: '水位'
+    siid: 2
+    piid: 8
+    unit: ''
+  - name: '防冰状态'
+    siid: 2
+    piid: 9
+    unit: ''
+  - name: '屏幕亮度'
+    siid: 3
+    piid: 2
+    unit: ''
+  - name: '灭菌开关状态'
+    siid: 4
+    piid: 1
+    unit: ''
+  - name: '定时灭菌状态'
+    siid: 4
+    piid: 2
+    unit: ''
+  - name: '灭菌周期'
+    siid: 4
+    piid: 3
+    unit: '日'
+  - name: '灭菌开始时间'
+    siid: 4
+    piid: 4
+    unit: '分'
