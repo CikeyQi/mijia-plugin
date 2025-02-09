@@ -1,0 +1,84 @@
+actionable:
+  - name: ["开关"]
+    desc: "插线板开关，可用值：开、关"
+    siid: 2
+    piid: 1
+    value_regexp: '/(开|关)/g'
+  - name: ["模式"]
+    desc: "插线板模式，可用值：0-1"
+    siid: 2
+    piid: 2
+    value_regexp: '/(0|1)/g'
+  - name: ["LED"]
+    desc: "LED开关，可用值：开、关"
+    siid: 6
+    piid: 1
+    value_regexp: '/(开|关)/g'
+  - name: ["蜂鸣器"]
+    desc: "蜂鸣器开关，可用值：开、关"
+    siid: 6
+    piid: 2
+    value_regexp: '/(开|关)/g'
+  - name: ["保持中继"]
+    desc: "保持中继开关，可用值：开、关"
+    siid: 6
+    piid: 4
+    value_regexp: '/(开|关)/g'
+  - name: ["更新电源"]
+    desc: "更新电源开关，可用值：开、关"
+    siid: 6
+    piid: 5
+    value_regexp: '/(开|关)/g'
+viewable:
+  - name: '开关'
+    siid: 2
+    piid: 1
+    unit: ''
+  - name: '模式'
+    siid: 2
+    piid: 2
+    unit: ''
+  - name: '温度'
+    siid: 2
+    piid: 3
+    unit: '℃'
+  - name: '工作时间'
+    siid: 2
+    piid: 4
+    unit: '分'
+  - name: '功耗'
+    siid: 3
+    piid: 1
+    unit: 'W'
+  - name: '电力'
+    siid: 3
+    piid: 2
+    unit: 'W'
+  - name: '电压'
+    siid: 3
+    piid: 3
+    unit: 'V'
+  - name: '电流'
+    siid: 3
+    piid: 4
+    unit: 'A'
+  - name: 'LED状态'
+    siid: 6
+    piid: 1
+    unit: ''
+  - name: '蜂鸣器状态'
+    siid: 6
+    piid: 2
+    unit: ''
+  - name: '系统状态'
+    siid: 6
+    piid: 3
+    unit: ''
+  - name: '保持中继'
+    siid: 6
+    piid: 4
+    unit: ''
+  - name: '更新电源'
+    siid: 6
+    piid: 5
+    unit: ''
